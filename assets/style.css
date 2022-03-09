@@ -1,0 +1,151 @@
+.body {
+    background-color: black;
+    color: rgb(51, 249, 29);
+    font-family: sans-serif;
+    font-weight: bold;
+    
+    
+}
+
+
+.title{
+    text-shadow: inset 0 0 50px rgb(0, 247, 255), 0 0 10px red, 0 0 5px red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#gameFrame{
+    background-color: black;
+    height: 500px;
+    width: 600px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    
+
+    background-image: url(/assets/retro.jpg);
+    background-size: cover;
+    background-position: bottom;
+    cursor: crosshair;
+    opacity: 0.8;
+}
+
+.enemy {
+    width: 150px;
+    height: 400px;
+    position: absolute;
+    background-color: beige;
+    bottom: -400px;
+    transition: all .5s;
+
+    width: 180px;
+    height: 280px;
+    border-radius: 100%;
+    background: linear-gradient(#240C2C, black);
+    box-shadow: inset 0 1em 1em coral;
+}
+
+.enemy:before{
+    content: " °_° ";
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    font-size: 4em;
+    text-align: center;
+    border-top: 20px double rgba(0, 0, 0, .5);
+}
+
+.enemy.showing {
+    bottom: 0px;
+}
+
+#enemy1 {left: 5px;}
+#enemy2 {left: 165px;}
+#enemy3 {left: 325px;}
+#enemy4 {left: 485px;}
+#enemy5 {left: 645px;}
+
+/* .enemy.dead {
+    background-color: gray;
+    height: 50px;
+
+    background: #222;
+    transform: rotate(-90deg);
+    bottom:  -140px;
+
+} */
+
+/* .enemy.dead:before {
+    content: "*_*";
+    color: #555;
+} */
+
+.enemy.shooting{
+    background-color: red;
+}
+
+#healthBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background-color: rgb(4, 148, 13);
+    transition: width .5s;
+}
+
+.buttonn {
+    height: 20%;
+    width: 20%;
+
+    
+    background-color: rgb(255, 215, 201);
+
+    border: 25;
+    box-shadow: none;
+    position: relative;
+    margin: 240px;
+
+
+    font-size: 2em;
+    letter-spacing: -2px;
+    opacity: 0.2;
+}
+
+.enemy:after {
+    content: " o ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 5px;
+    bottom: 30px;
+
+    background-color: #222;
+    color: #555;
+    text-align: center;
+
+    border-radius: 15px;
+    border-bottom: 20px solid #111;
+    border-right: 2px solid brown;
+
+    transition: all .2s;
+
+}
+
+.enemy.shooting{
+    background: #471515;
+
+}
+
+.enemy.shooting:after {
+    content: " * ";
+    left: 20px;
+    color: rgb(26, 235, 3);
+
+    font-size: 4em;
+    transform: scale(2);
+
+    box-shadow: 20px -10px 30px black;
+}
+

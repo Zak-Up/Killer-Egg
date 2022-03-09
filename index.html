@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>SHOT GAME</title>
+</head>
+<h1 class="title">Zaky Up</h1>
+<body class="body" inClick="myGunSound.play()">
+    <div id="gameFrame">
+
+        <div id="healthBar"></div>
+
+        <div class="enemy " id="enemy1" onclick= "iShoot(this)"></div>
+        <div class="enemy " id="enemy2" onclick="iShoot(this)"></div>
+        <div class="enemy " id="enemy3" onclick="iShoot(this)"></div>
+        <div class="enemy" id="enemy4" onclick="iShoot(this)"></div>
+        <div class="enemy dead " id="enemy5" onclick="iShoot(this)"></div>
+
+        <button class="buttonn" onclick= "newGame()" > New Game </button>
+
+    </div>
+
+    
+
+    <script src="/assets/script.js"></script>
+</body>
+</html>
